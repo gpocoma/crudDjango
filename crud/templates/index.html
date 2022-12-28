@@ -1,0 +1,9 @@
+{% extends 'base.html' %}
+{% block content %}
+<div>
+    <ul>
+        <li><a href="{% url 'create_view' %}">Crear Cliente</a></li>
+        <li><a href="{% url 'read_view' %}">Listar Clientes</a></li>
+    </ul>
+</div>
+{%  endblock content %}

@@ -1,0 +1,13 @@
+{% extends 'base.html' %}
+{% block content %}
+    <h1>Clientes</h1>
+    <ul>
+        {% for cliente in object_list %}
+            <li>{{ cliente.nombre }} - {{ cliente.apellido_paterno }} - {{ cliente.apellido_materno }} <a
+                    href="{% url 'update_view' pk=cliente.id %}">MODIFICAR</a> <a
+                    href="{% url 'delete_view' pk=cliente.id %}">ELIMINAR</a></li>
+        {% empty %}
+            <li>Aun no hay clientes</li>
+        {% endfor %}
+    </ul>
+{% endblock content %}
